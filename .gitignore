@@ -1,0 +1,5 @@
+runs/
+output/
+datasets/
+*.pt
+ultralytics_env/
