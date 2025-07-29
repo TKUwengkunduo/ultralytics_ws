@@ -9,7 +9,7 @@ class YOLOTrainer:
         epochs: int = 100,                      # 100
         time: float = None,                     # None
         patience: int = 100,                    # 100
-        batch: float = 8,                       # 16
+        batch: float = 16,                      # 16
         imgsz: int = 640,                       # 640
         save: bool = True,                      # True
         save_period: int = 1,                   # -1
@@ -17,7 +17,7 @@ class YOLOTrainer:
         device = 0,                             # None ## [0,1]
         workers: int = 32,                      # 8
         project: str = None,                    # None
-        name: str = "human0716",                # None
+        name: str = "renesas",                  # None
         exist_ok: bool = False,                 # False
         pretrained = True,                      # True
         optimizer: str = 'auto',                # auto
@@ -132,8 +132,8 @@ class YOLOTrainer:
 # 使用範例
 if __name__ == "__main__":
     trainer = YOLOTrainer(
-        model="yolo12x.pt",
-        data="datasets/human_dataset/human.yaml"
+        model="yolov8n.pt",
+        data="datasets/renesas/data.yaml"
     )
 
     results = trainer.train()
